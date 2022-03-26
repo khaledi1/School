@@ -226,7 +226,7 @@ namespace MasterMind
             if (plats[0] > 0 && plats[1] > 0 && plats[2] > 0 && plats[3] > 0 && tur < 11)
             {
                 // Vinst
-                if (plats[0] == platsKorrekt[0] && plats[1] == platsKorrekt[1] && plats[2] == platsKorrekt[2] && plats[3] == platsKorrekt[3] && tur == 10) 
+                if (plats[0] == platsKorrekt[0] && plats[1] == platsKorrekt[1] && plats[2] == platsKorrekt[2] && plats[3] == platsKorrekt[3]) 
                 {
                     for (int i = 0; i < 4; i++)
                     {
