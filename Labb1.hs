@@ -19,3 +19,9 @@ stepsPower k = k
 comparePower1 :: Int -> Int -> Bool
 comparePower1 n k | power(n, k) == power1(n, k) = True
                   | otherwise       = False
+
+test1 = power1 2 63 == power 2 63
+test2 = power1 2 64 == power 2 64 
+test3 = power2 3 17 == power1 3 17 
+test4 = power2 4 12 == power 4 12 
+test5 = power2 4 16 == power1 4 16 
