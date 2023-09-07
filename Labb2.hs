@@ -2,6 +2,7 @@ module Blackjack where
 
 import Cards
 import RunGame
+import Data.String (String)
 
 aCard1 :: Card
 aCard1 = Card Ace Spades -- define your favorite card here
@@ -33,12 +34,12 @@ valueRank Ace | numberOfAces > 1 = 1
               | otherwise = 11
 valueRank (Numeric tal) = tal
 
-
 valueCard :: Card -> Int
-valueCard = undefined
+valueCard (Card r s) = valueRank r
 
 displayCard :: Card -> String
-displayCard (Card r s) = show r ++ " of " ++ show s
+displayCard (Card r s) | r == Numeric x = show (valueRank r)  ++ " of " ++ show s 
+                       | otherwise = show r ++ " of " ++ show s
 
---display :: Hand -> String
---display hand = [show Rank  ++ " of " ++ show Suit |] 
+displayHand :: Hand -> String
+displayHand hnd = unwords (lines (unlines [displayCard x | x <- hnd]))
