@@ -17,7 +17,10 @@ aHand = [aCard1, aCard2] -- a Hand with two Cards, aCard1 and aCard2
 {-
 size hand2
   = size [Card (Numeric 2) Hearts, Card Jack Spades]
-  = length hand2
+  = size (Card ((Numeric 2) Hearts), (Card Jack Spades) [])
+  = 1 + size ((Card Jack Spades) [])
+  = 1 + 1 + size []
+  = 1 + 1 + 0 
   = 2
 -}
 
